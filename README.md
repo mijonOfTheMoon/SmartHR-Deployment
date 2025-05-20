@@ -126,6 +126,8 @@ Buat file .dockerignore baru.
 nano .dockerignore
 ```
 
+Isi file .dockerignore sebagai berikut.
+
 ```bash
 .editorconfig
 .env.example
@@ -144,6 +146,8 @@ Buat file Dockerfile baru.
 nano Dockerfile
 ```
 
+Isi file Dockerfile sebagai berikut.
+
 ```bash
 FROM serversideup/php:8.2-fpm-nginx-alpine
 WORKDIR /var/www/html
@@ -159,4 +163,10 @@ RUN php artisan key:generate
 RUN php artisan reverb:install
 RUN php artisan storage:link
 RUN npm install --no-cache && npm run build && npm cache clean --force && rm -rf node_modules
+```
+
+Build imagenya.
+
+```bash
+docker build -t adsis/smart-hr:stable
 ```
