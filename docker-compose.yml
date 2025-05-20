@@ -1,0 +1,21 @@
+services:
+  web:
+    image: 1:latest
+    restart: always
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+    env_file: env_web
+
+  db:
+    image: mysql:8.4
+    restart: always
+    ports:
+      - "3306:3306"
+    volumes:
+      - "smarthr-db:/var/lib/mysql"
+    env_file: env_db
+
+volumes:
+  smarthr-db:
