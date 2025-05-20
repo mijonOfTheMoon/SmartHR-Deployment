@@ -33,7 +33,7 @@ This will:
 Seed the database if you haven't do it before
 
 ```bash
-docker exec (nama folder)-web-1 sh -c "php artisan migrate:fresh --seed --force && php artisan module:migrate --all --seed --force"
+docker exec "$(basename "$PWD")-web-1" sh -c "php artisan migrate:fresh --seed --force && php artisan module:migrate --all --seed --force"
 ```
 
 ### Access the Application
@@ -58,7 +58,7 @@ To stop the application and remove the volumes:
 docker compose down -v
 ```
 
-Cara membuat image adsis/smart-hr:stable
+# Cara membuat image adsis/smart-hr:stable
 
 Clone dan pindah ke dalam folder source code
 
