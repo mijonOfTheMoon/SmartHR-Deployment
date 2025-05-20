@@ -33,7 +33,7 @@ This will:
 Seed the database if you haven't do it before
 
 ```bash
-docker exec "$(basename "$PWD")-web-1" sh -c "php artisan migrate:fresh --seed --force && php artisan module:migrate --all --seed --force"
+docker exec "smarthr-deployment-web-1" sh -c "php artisan migrate:fresh --seed --force && php artisan module:migrate --all --seed --force"
 ```
 
 ### Access the Application
