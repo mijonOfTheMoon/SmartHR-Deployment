@@ -30,6 +30,12 @@ This will:
 - Start the MySQL database on port 3306
 - Create a persistent volume for the database
 
+Seed the database if you haven't do it before
+
+```bash
+docker exec (nama folder)-web-1 sh -c "php artisan migrate:fresh --seed --force && php artisan module:migrate --all --seed --force"
+```
+
 ### Access the Application
 
 Once the containers are running, you can access the application at:
