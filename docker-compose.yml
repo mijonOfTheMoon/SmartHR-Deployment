@@ -1,6 +1,6 @@
 services:
   web:
-    image: 1:latest
+    image: adsis/smart-hr:stable
     restart: always
     ports:
       - "8080:8080"
